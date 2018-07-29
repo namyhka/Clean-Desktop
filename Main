@@ -1,0 +1,116 @@
+import glob,shutil
+
+## NOTE: The "#####" in the path is just my way of covering my real user name
+
+path = r"/Users/#####/desktop/"  #desktop path
+images = r"/Users//#####//desktop/Image Files" #folder for image files
+excel = r"/Users//#####//desktop/Excel Files" #folder for excel / sheet files
+pdf = r"/Users//#####//desktop/PDF Files" #folder for pdf files
+docs = r"/Users//#####//desktop/Word Files" #folder for docs 
+videos = r"/Users//#####//desktop/Videos" #folder for videos
+collaterals = r"/Users//#####//desktop/Creative Collaterals" #folder for psd and tif files
+compressed = r"/Users//#####//desktop/Compressed Files" #folder for rar/zip files
+
+os.chdir(path) #just in case pwd is not in desktop
+
+## moving png files ## 
+for file in glob.glob('./*.png'):
+    try:    
+        shutil.move(file,images)
+    except:
+        pass
+    
+## moving jpg files ## 
+for file in glob.glob('./*.jpg'):
+    try:    
+        shutil.move(file,images)
+    except:
+        pass
+    
+## moving jpeg files ## 
+for file in glob.glob('./*.jpeg'):
+    try:    
+        shutil.move(file,images)
+    except:
+        pass
+    
+## moving pdf files ## 
+for file in glob.glob('./*.pdf'):
+    try:    
+        shutil.move(file,pdf)
+    except:
+        pass
+    
+## moving excel files ## 
+for file in glob.glob('./*.xls'):
+    try:    
+        shutil.move(file,excel)
+    except:
+        pass
+    
+## moving excel files ## 
+for file in glob.glob('./*.xlsx'):
+    try:    
+        shutil.move(file,excel)
+    except:
+        pass
+    
+## moving word files ## 
+for file in glob.glob('./*.doc'):
+    try:    
+        shutil.move(file,docs)
+    except:
+        pass
+    
+## moving word files ## 
+for file in glob.glob('./*.docx'):
+    try:    
+        shutil.move(file,docs)
+    except:
+        pass
+    
+## moving video files ## 
+for file in glob.glob('./*.mp4'):
+    try:    
+        shutil.move(file,videos)
+    except:
+        pass
+    
+## moving video files ## 
+for file in glob.glob('./*.mkv'):
+    try:    
+        shutil.move(file,videos)
+    except:
+        pass
+
+## moving psd/tif files ##     
+for file in glob.glob('./*.tif'):
+    try:    
+        shutil.move(file,collaterals)
+    except:
+        pass
+
+## moving psd/tif files ##  
+for file in glob.glob('./*.psd'):
+    try:    
+        shutil.move(file,collaterals)
+    except:
+        pass    
+
+    
+## moving zip/rar files ##  
+for file in glob.glob('./*.zip'):
+    try:    
+        shutil.move(file,compressed)
+    except:
+        pass
+
+## moving zip/rar files ##  
+for file in glob.glob('./*.rar'):
+    try:    
+        shutil.move(file,compressed)
+    except:
+        pass    
+    
+    
+print('File moving done!')
