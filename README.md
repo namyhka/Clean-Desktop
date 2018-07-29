@@ -14,3 +14,4 @@ I'm planning to implement the ff. fixed when I get the time to do so -
 2. If extension type folder does not yet exist, create one
 3. Misc items go to misc folder
 4. Combine 2 for loops for one file type (xls and xlsx) into just one for loop
+5. If file name already exists, just rename file as filename_copy
